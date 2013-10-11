@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="header">
+        <ul id="mainNav" class="nav nav-pills pull-right">
+            {{#linkTo "index" tagName="li"}}
+                <a {{bindAttr href="view.href"}}>Home</a>
+            {{/linkTo}}
+            {{#linkTo "user" tagName="li"}}
+                <a {{bindAttr href="view.href"}}>User</a>
+            {{/linkTo}}
+        </ul>
+        <h3 class="text-muted">Ember example</h3>
+    </div>
+
+    <article id="main">
+        {{outlet}}
+    </article>
+
+    <div class="footer">
+        Created by <a href="http://www.linkedin.com/in/barthaziandras">Andras Barthazi</a>.
+        <br />
+        See my related presentation: <a href="https://prezi.com/sxv2t_nambyd/client-side-mvc-backbonemarionette-ember-angular/">Client side MVC: Backbone+Marionette, Ember, Angular</a>
+    </div>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-md-12">
+        <form role="form">
+            <div class="form-group">
+            	{{view EmberApp.SearchField
+            	  valueBinding="query"
+            	  type="search"
+            	  class="form-control"
+            	  placeholder="Search"
+            	  action="doSearch"
+            	}}
+            </div>
+        </form>
+    </div>
+    <div class="col-md-12">
+    	{{view EmberApp.UserResults}}
+    </div>
+</div>
