@@ -1,10 +1,5 @@
 EmberApp.SearchField = Ember.TextField.extend({
-	didInsertElement: function() {
-        this.$().focus();
-    },
-    insertNewline: function(){
-        // preventing default behaviour for "enter"
-    },
+	attributeBindings: ['autofocus'],
 	keyUp: function(){
         this.sendAction();
     }

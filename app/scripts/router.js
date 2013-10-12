@@ -1,9 +1,7 @@
 EmberApp.router = Ember.Router.map(function () {
-	this.resource('index', { path: 'home' });
+	this.resource('home');
 	this.resource('user', function(){
-		this.route('search', { path: 'search/:query' })
+		this.route('search', { queryParams: ['query'] });
 	});
-	// not perfect
-	this.resource('notfound', { path: '' });
 });
 
