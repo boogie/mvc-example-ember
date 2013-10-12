@@ -4,6 +4,6 @@ EmberApp.router = Ember.Router.map(function () {
 		this.route('search', { path: 'search/:query' })
 	});
 	// not perfect
-	this.resource('notfound', { path: '' });
+	this.resource('notfound', { path: '*path' });
 });
 
