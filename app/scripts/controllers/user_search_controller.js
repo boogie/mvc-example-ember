@@ -3,7 +3,7 @@ EmberApp.UserSearchController = Ember.ArrayController.extend({
   query: Ember.computed.alias('controllers.user.query'),
 
   results: function() {
-    var query = this.get('query'),
+    var query = this.get('query') || '',
         results = [];
 
     for (var i = 0; i < query.length; i++) {
@@ -11,5 +11,10 @@ EmberApp.UserSearchController = Ember.ArrayController.extend({
     }
 
     return results;
-  }.property('query')
+  }.property('query'),
+
+  queryDidChange: function() {
+    var query = this.get('query');
+    this.send('doSearch', query);
+  }
 });
