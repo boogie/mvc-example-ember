@@ -1,10 +1,8 @@
 <div class="row">
     <div class="col-md-12">
-        <form role="form" {{action 'doSearch' on='submit'}}>
-            <div class="form-group">
-                {{input type="search" value=query class="form-control" autofocus='autofocus'}}
-            </div>
-        </form>
+        <div class="form-group">
+            {{input type="search" value=query class="form-control" autofocus='autofocus'}}
+        </div>
     </div>
     <div class="col-md-12">
         {{outlet}}

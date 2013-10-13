@@ -11,10 +11,5 @@ EmberApp.UserSearchController = Ember.ArrayController.extend({
     }
 
     return results;
-  }.property('query'),
-
-  queryDidChange: function() {
-    var query = this.get('query');
-    this.send('doSearch', query);
-  }
+  }.property('query')
 });

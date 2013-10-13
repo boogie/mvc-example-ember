@@ -3,6 +3,17 @@ EmberApp.UserController = Ember.Controller.extend({
 
   queryDidChange: function() {
     var query = this.get('query');
-    this.send('doSearch', query);
-  }.observes('query')
+    this.send('updateRoute', query);
+  }.observes('query'),
+
+  actions: {
+    updateRoute: function(query) {
+		if (query) {
+			this.replaceRoute('user.search', {queryParams: { query: query }})
+		} else
+		if (query !== null) {
+			this.transitionToRoute('user')
+		}
+    }
+  }
 });
