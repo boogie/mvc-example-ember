@@ -1,25 +1,28 @@
-<div class="container">
-    <div class="header">
-        <ul id="mainNav" class="nav nav-pills pull-right">
-            {{#linkTo "home" tagName="li"}}
-                <a {{bindAttr href="view.href"}}>Home</a>
-            {{/linkTo}}
-            {{#linkTo "user" tagName="li"}}
-                <a {{bindAttr href="view.href"}}>User</a>
-            {{/linkTo}}
-        </ul>
-        <h3 class="text-muted">Ember example</h3>
+<div id="body">
+    <div class="container">
+        <div class="header">
+            <ul id="mainNav" class="nav nav-pills pull-right">
+                {{#linkTo "home" tagName="li"}}
+                    <a {{bindAttr href="view.href"}}>Home</a>
+                {{/linkTo}}
+                {{#linkTo "user" tagName="li"}}
+                    <a {{bindAttr href="view.href"}}>User</a>
+                {{/linkTo}}
+            </ul>
+            <h3 class="text-muted">Ember example</h3>
+        </div>
+
+        <article id="main">
+            {{outlet}}
+        </article>
+
+        <div class="footer">
+            Created by <a href="http://www.linkedin.com/in/barthaziandras">Andras Barthazi</a>
+            and <a href="https://github.com/boogie/mvc-example-ember/graphs/contributors">others</a>.
+            <br />
+            See my related presentation: <a href="https://prezi.com/sxv2t_nambyd/client-side-mvc-backbonemarionette-ember-angular/">Client side MVC: Backbone+Marionette, Ember, Angular</a>
+        </div>
     </div>
-
-    <article id="main">
-        {{outlet}}
-    </article>
-
-    <div class="footer">
-        Created by <a href="http://www.linkedin.com/in/barthaziandras">Andras Barthazi</a>
-        and <a href="https://github.com/boogie/mvc-example-ember/graphs/contributors">others</a>.
-        <br />
-        See my related presentation: <a href="https://prezi.com/sxv2t_nambyd/client-side-mvc-backbonemarionette-ember-angular/">Client side MVC: Backbone+Marionette, Ember, Angular</a>
-    </div>
-
 </div>
+<div id="modal"></div>
+<div id="modal-contents">{{outlet modal}}</div>
